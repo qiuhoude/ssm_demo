@@ -12,8 +12,8 @@ CREATE TABLE seckill(
   `seckill_id` BIGINT NOT NUll AUTO_INCREMENT COMMENT '商品库存ID',
   `name` VARCHAR(120) NOT NULL COMMENT '商品名称',
   `number` int NOT NULL COMMENT '库存数量',
-  `start_time` TIMESTAMP  NOT NULL COMMENT '秒杀开始时间',
-  `end_time`   TIMESTAMP   NOT NULL COMMENT '秒杀结束时间',
+  `start_time` TIMESTAMP  NOT NULL COMMENT  '秒杀开始时间',
+  `end_time`   TIMESTAMP  NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '秒杀结束时间',
   `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (seckill_id),
   key idx_start_time(start_time),
@@ -26,10 +26,10 @@ CREATE TABLE seckill(
 -- 初始化数据
 INSERT into seckill(name,number,start_time,end_time)
 VALUES
-  ('1000元秒杀iphone6',100,'2016-01-01 00:00:00','2016-01-02 00:00:00'),
-  ('800元秒杀ipad',200,'2016-01-01 00:00:00','2016-01-02 00:00:00'),
-  ('6600元秒杀mac book pro',300,'2016-01-01 00:00:00','2016-01-02 00:00:00'),
-  ('7000元秒杀iMac',400,'2016-01-01 00:00:00','2016-01-02 00:00:00');
+  ('1000元秒杀iphone6',100,'2016-01-01 00:00:00','2017-05-20 00:00:00'),
+  ('800元秒杀ipad',200,'2016-01-01 00:00:00','2017-05-20 00:00:00'),
+  ('6600元秒杀mac book pro',300,'2016-01-01 00:00:00','2017-05-20 00:00:00'),
+  ('7000元秒杀iMac',400,'2016-01-01 00:00:00','2017-05-20 00:00:00');
 
 -- 秒杀成功明细表
 -- 用户登录认证相关信息(简化为手机号)
