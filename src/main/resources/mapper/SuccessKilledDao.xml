@@ -1,7 +1,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.houde.dao.SeckillDao">
+<mapper namespace="com.houde.dao.SuccessKilledDao">
     <!--目的:为dao接口方法提供sql语句配置
     即针对dao接口中的方法编写我们的sql语句-->
 
@@ -16,7 +16,7 @@
 
     </insert>
 
-    <select id="queryByIdWithSeckill">
+    <select id="queryByIdWithSeckill" resultType="SuccessKilled" >
 
         <!--根据seckillId查询SuccessKilled对象，并携带Seckill对象-->
         <!--如何告诉mybatis把结果映射到SuccessKill属性同时映射到Seckill属性-->
