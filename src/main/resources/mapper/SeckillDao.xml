@@ -21,9 +21,9 @@
         WHERE seckill_id=#{seckillId}
     </select>
 
-    <select id="queryAll">
+    <select id="queryAll" resultType="Seckill">
 
-        SELECT * FROM seckill order by name desc limit #{offset},#{limit};
+        SELECT * FROM seckill order by create_time desc limit #{offset},#{limit};
     </select>
 
 </mapper>
